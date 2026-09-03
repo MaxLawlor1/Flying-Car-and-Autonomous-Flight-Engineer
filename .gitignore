@@ -45,3 +45,4 @@ tmp/
 *.csv
 *.zip
 **/*.zip
+**/ExerciseAnswers.py
