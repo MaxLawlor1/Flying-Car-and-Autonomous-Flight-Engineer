@@ -46,3 +46,8 @@ tmp/
 *.zip
 **/*.zip
 **/ExerciseAnswers.py
+Controls/Introduction to Vehicle Control/controllers.py
+Controls/Introduction to Vehicle Control/plotting.py
+Controls/Introduction to Vehicle Control/simplified_monorotor.py
+Controls/Introduction to Vehicle Control/testing.py
+Controls/Introduction to Vehicle Control/trajectories.py
