@@ -150,8 +150,8 @@ class MotionPlanning(Drone):
         # DONE: convert start position to current position rather than map center
         # grid_start = (self.local_position[0] - north_offset, self.local_position[1] - east_offset)
         grid_start = (
-            int(self.current_local_position[0] - north_offset),
-            int(self._current_local_position[1] - east_offset)
+            int(current_local_position[0] - north_offset),
+            int(current_local_position[1] - east_offset)
         )
         grid_start = (
             max(0, min(grid.shape[0] - 1, grid_start[0])),
