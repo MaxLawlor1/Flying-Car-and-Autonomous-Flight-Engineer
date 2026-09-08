@@ -46,8 +46,15 @@ tmp/
 *.zip
 **/*.zip
 **/ExerciseAnswers.py
+
+# Individual files
 Controls/Introduction to Vehicle Control/controllers.py
 Controls/Introduction to Vehicle Control/plotting.py
 Controls/Introduction to Vehicle Control/simplified_monorotor.py
 Controls/Introduction to Vehicle Control/testing.py
 Controls/Introduction to Vehicle Control/trajectories.py
+Controls/Control Architecture/controllers.py
+Controls/Control Architecture/drone.py
+Controls/Control Architecture/plotting.py
+Controls/Control Architecture/simulate.py
+Controls/Control Architecture/trajectories.py
