@@ -58,3 +58,5 @@ Controls/Control Architecture/drone.py
 Controls/Control Architecture/plotting.py
 Controls/Control Architecture/simulate.py
 Controls/Control Architecture/trajectories.py
+Controls/Full 3D Control/testing.py
+Controls/Full 3D Control/solution.py
