@@ -43,6 +43,7 @@ dist/
 Logs/
 tmp/
 *.csv
+*.mp4
 *.zip
 **/*.zip
 **/ExerciseAnswers.py
