@@ -46,6 +46,7 @@ tmp/
 *.zip
 **/*.zip
 **/ExerciseAnswers.py
+Controls/project_building_a_controller/FCND-Controls-CPP/
 
 # Individual files
 Controls/Introduction to Vehicle Control/controllers.py
