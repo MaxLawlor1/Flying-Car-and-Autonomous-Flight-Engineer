@@ -62,3 +62,14 @@ Controls/Control Architecture/simulate.py
 Controls/Control Architecture/trajectories.py
 Controls/Full 3D Control/testing.py
 Controls/Full 3D Control/solution.py
+Estimation/Introduction to Estimation/data.txt
+Estimation/Introduction to Sensors/gyro_test.py
+Estimation/Introduction to Sensors/test_three_d_object.py
+Estimation/Introduction to Sensors/calibrating_object.py
+Estimation/Introduction to Sensors/magnetic_field_measurements.py
+Estimation/Introduction to Sensors/misalignment_calibration.py
+Estimation/Introduction to Sensors/flightpath3D.py
+Estimation/Extended Kalman Filters/StateSpaceDisplay.py
+Estimation/Introduction to Sensors/Measurements.py
+Estimation/Extended Kalman Filters/StateSpaceDisplayFor2D.py
+Estimation/The 3D EKF and UKF/helpers.py
