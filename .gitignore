@@ -48,6 +48,7 @@ tmp/
 **/*.zip
 **/ExerciseAnswers.py
 Controls/project_building_a_controller/FCND-Controls-CPP/
+Estimation/Estimation Project/FCND-Estimation-CPP/
 
 # Individual files
 Controls/Introduction to Vehicle Control/controllers.py
@@ -73,3 +74,4 @@ Estimation/Extended Kalman Filters/StateSpaceDisplay.py
 Estimation/Introduction to Sensors/Measurements.py
 Estimation/Extended Kalman Filters/StateSpaceDisplayFor2D.py
 Estimation/The 3D EKF and UKF/helpers.py
+Estimation/GPS Denied Navigation/utils.py
