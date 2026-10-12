@@ -99,16 +99,11 @@ I then updated the function `UpdateFromGPS` by populating $z_t$ and $\prime{h(x_
 
 ![alt_text](scenario_11_ideal.png "Scenario 11 - Ideal Estimator")
 
-Finally, I set `Quad.UseIdealEstimator = 0` and verified that the simulation was passed with the realistic EKF.
+Finally, I set `Quad.UseIdealEstimator = 0` in both `11_GPSUpdate.txt` and `QuadControlParams.txt` and verified that the simulation was passed with the realistic EKF.
 The final flight settings are included in the file `11_GPSUpdate.txt`.
 
 ![alt_text](scenario_11_nonideal.png "Scenario 11 - Realistic Estimator")
 
-The figure below shows that the positional error does not rise to above 1m, even with the realistic dynamics and EKF. This was calculated as:  
-  
-$e_{abs} = +\sqrt{(x_{ref} - x)^{2} + (y_{ref} - y)^{2} + (z_{ref} - z)^{2}}$
-
-![alt_text](position_error.png "Scenario 11 - Realistic Estimator Error")
 
 
 ## Step 6: Adding Your Controller
@@ -120,12 +115,21 @@ _Rubric Point: De-tune your controller to successfully fly the final desired box
 Finally, I implemented my controller from the previous project, and tuned the values down to pass the scenarios. I only changed position and velocity gains, as follows:
 
 **Position control gains**
-kpPosXY $= 18$
+kpPosXY $= 25$
 kpPosZ $= 70$
 KiPosZ $= 18$
 
 **Velocity control gains**
 kpVelXY $= 8$
-kpVelZ $= 70$
+kpVelZ $= 50$
 
-![alt_text](controller_tuning.png "Controller Tuning")
+I also ran `LastScenario`, which again confirmed that the positional error was within 1m tolerance. The flight settings can be seein in `QuadControlParams.txt`, which has `Quad.UseIdealEstimator = 0`.
+
+![alt_text](final_scenario.png "Last Scenario")
+
+The figures below show that the positional tracking remains good, even with the realistic dynamics and EKF. The positional error can also be seen. This was calculated as:  
+  
+$e_{abs} = +\sqrt{(x_{ref} - x)^{2} + (y_{ref} - y)^{2} + (z_{ref} - z)^{2}}$
+
+![alt_text](position_tracking.png "Scenario 11 - Realistic Estimator Tracking")
+![alt_text](position_error.png "Scenario 11 - Realistic Estimator Error")

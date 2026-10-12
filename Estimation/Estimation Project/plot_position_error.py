@@ -1,8 +1,13 @@
 import matplotlib.pyplot as plt
 import pandas as pd
-import seaborn as sns
 
-data = pd.read_csv('./scenario_11_position_data.csv', header=0)
+data = pd.read_csv('./FCND-Estimation-CPP/config/log/Graph2.txt', header=0)
+
+data_rounded = data.copy()
+data_rounded['time'] = data_rounded['time'].apply(lambda x: round(x, 3))
+data = data.loc[data_rounded['time'].eq(0.).idxmin():]
+
+
 melted = data.melt('time', var_name='Variable', value_name='Value')
 
 time = data['time']
@@ -51,5 +56,51 @@ ax2.set_ylabel('Absolute Positional Error (m)')
 ax2.legend(['Total Error'])
 
 plt.show()
-
 fig.savefig('position_error.png')
+
+
+fig1 = plt.figure(figsize=(10,8))
+ax = fig1.add_subplot(1,1,1)
+plt.plot(
+    time, 
+    data[' Quad.Ref.X'],
+    c='lightcoral',
+    linestyle='--'
+)
+plt.plot(
+    time, 
+    data[' Quad.Ref.Y'],
+    c='chartreuse',
+    linestyle='--'
+)
+plt.plot(
+    time, 
+    data[' Quad.Ref.Z'],
+    c='skyblue',
+    linestyle='--'
+)
+plt.plot(
+    time, 
+    data[' Quad.Pos.X'],
+    c='r',
+    linewidth=2,
+)
+plt.plot(
+    time, 
+    data[' Quad.Pos.Y'],
+    c='g',
+    linewidth=2,
+)
+plt.plot(
+    time, 
+    data[' Quad.Pos.Z'],
+    c='b',
+    linewidth=2,
+)
+ax.set_title('Position Tracking Over Time')
+ax.set_xlabel('Time (s)')
+ax.set_ylabel('Position in Global Frame')
+ax.legend(['$x_{ref}$', '$y_{ref}$', '$z_{ref}$', '$x$', '$y$', '$z$'])
+
+plt.show()
+fig1.savefig('position_tracking.png')
